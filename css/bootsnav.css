@@ -35,7 +35,7 @@ nav.navbar.bootsnav{
     -webkit-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: #45ada8;
     border: none;
     z-index: 9;
 }
@@ -546,7 +546,7 @@ nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:
     nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover,
     nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover{
         background-color: transparent;
-		color: #b0b435;
+		color: #45ada8;
 		-ms-transform: translateX(3px);
 		-webkit-transform: translateX(3px);
 		transform: translateX(3px);
