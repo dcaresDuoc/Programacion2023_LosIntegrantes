@@ -13,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ejemplo de conexión a la base de datos utilizando MySQLi
         $servername = "localhost";
-        $username_db = "tu_usuario";
-        $password_db = "tu_contraseña";
-        $database = "nombre_de_tu_base_de_datos";
+        $username_db = "root";
+        $password_db = "leandro123";
+        $database = "fran_app";
 
         // Crear la conexión
         $conn = new mysqli($servername, $username_db, $password_db, $database);
