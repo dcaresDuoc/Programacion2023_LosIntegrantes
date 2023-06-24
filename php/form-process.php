@@ -10,10 +10,23 @@ if (empty($_POST["name"])) {
 }
 
 // EMAIL
-if (empty($_POST["email"])) {
+if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
     $errorMSG .= "Email is required ";
 } else {
     $email = $_POST["email"];
+}
+
+
+//EMAIL 2
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $correo = $_POST['correo'];
+    
+    // Validar el formato del correo electrónico
+    if () {
+        $errorMSG = "El correo electrónico no es válido.";
+    } else {
+        echo "El correo electrónico es válido.";
+    }
 }
 
 // Subject
@@ -31,7 +44,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "armanmia7@gmail.com";
+$EmailTo = "al.grumi@duocuc.cl";
 $Subject = "New Message Received";
 
 // prepare email body text
