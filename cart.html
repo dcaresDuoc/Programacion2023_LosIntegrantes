@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +27,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <script text="text/javascript" src="js/api.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -34,29 +35,8 @@
 
 </head>
 
-<body onload="getDatos()">
-    <!-- Start Main Top -->
-    <div class="main-top">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- USO DE API -->
-                <!-- (2).- Aqui trae los datos solicitados -->
-                <div id="test" style="color: aliceblue; padding-left: 30% ;"></div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<!-- <div class="login-box">
-						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option>Register Here</option>
-							<option>Sign In</option>
-						</select>
-					</div> -->
-                    <div class="text-slid-box">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
+    <input type="hidden" id="pagetracker" style="display:none" value="CART">
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -64,23 +44,24 @@
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" class="logo" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
-                        <li class="dropdown">
-                            <a href="shop.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Tienda</a>
+                        <li class="nav-item active dropdown">
+                            <a href="shop.html" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Tienda</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Catálogo</a></li>
-								<li><a href="shop-detail.html">Detalle de producto</a></li>
+                                <li><a href="shop.html">Catálogo</a></li>
+                                <li><a href="shop-detail.html">Detalle de producto</a></li>
                                 <li><a href="cart.html">Carrito</a></li>
                                 <li><a href="checkout.html">Pagar</a></li>
                                 <li><a href="my-account.html">Mi cuenta</a></li>
@@ -97,15 +78,13 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu">
-							<a href="cart.html">
-								<i class="fa fa-shopping-bag"></i>
-								<span class="badge">3</span>
-								<p>Mi Carrito</p>
-							</a>
-                            <li class="nav-item"><a class="nav-link" href="login.php">Iniciar sesión</a></li><li class="nav-item"></li>
-                            <li class="nav-item"><a class="nav-link" href="register.php">Registrarse</a></li><li class="nav-item"></li>
-						</li>
+                        <li class="side-menu"><a href="cart.html">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="badge" id="CART_LEN">3</span>
+                                <p>Mi Carrito</p>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.php">Iniciar sesión</a></li>
+                        <li class="nav-item"></li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -131,7 +110,7 @@
                             <p>1x - <span class="price">$8.990</span></p>
                         </li>
                         <li class="total">
-                            <a  href="cart.html" class="btn btn-default hvr-hover btn-cart">Ver Carrito</a>
+                            <a href="cart.html" class="btn btn-default hvr-hover btn-cart">Ver Carrito</a>
                             <span class="float-right"><strong>Total</strong>: $53.970</span>
                         </li>
                     </ul>
@@ -188,79 +167,8 @@
                                     <th>Quitar</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                            Bravery Chicken Adult alimento perro
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$23.990</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$23.990</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="images/img-pro-02.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                            Bravery Chicken Adult Cat
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$20.990</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$20.990</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                            Portland scratch board
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$8.990</p>
-                                    </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$8.990</p>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
+                            <tbody id="INDEXPRODUCTTAB">
+
                             </tbody>
                         </table>
                     </div>
@@ -271,7 +179,8 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="coupon-box">
                         <div class="input-group input-group-sm">
-                            <input class="form-control" placeholder="Ingresa el codigo del cupon" aria-label="Coupon code" type="text">
+                            <input class="form-control" placeholder="Ingresa el codigo del cupon"
+                                aria-label="Coupon code" type="text">
                             <div class="input-group-append">
                                 <button class="btn btn-theme" type="button">Aplicar cupon</button>
                             </div>
@@ -292,29 +201,31 @@
                         <h3>Resumen del pedido</h3>
                         <div class="d-flex">
                             <h4>Sub Total</h4>
-                            <div class="ml-auto font-weight-bold"> $ 53.970</div>
+                            <div class="ml-auto font-weight-bold" id="CART_SUBTOTAL"></div>
                         </div>
                         <div class="d-flex">
                             <h4>Descuento</h4>
-                            <div class="ml-auto font-weight-bold"> $ -3.970 </div>
+                            <div class="ml-auto font-weight-bold" id="DISCOUNT_TAXS"></div>
                         </div>
                         <hr class="my-1">
                         <div class="d-flex">
                             <h4>Cupon de descuento</h4>
-                            <div class="ml-auto font-weight-bold"> $ -5000 </div>
+                            <div class="ml-auto font-weight-bold" id="DISCOUNT_COUP"></div>
                         </div>
                         <div class="d-flex">
                             <h4>Costo de envío</h4>
-                            <div class="ml-auto font-weight-bold">GRATIS</div>
+                            <div class="ml-auto font-weight-bold" id="SHIPPING_TOTL"></div>
                         </div>
                         <hr>
                         <div class="d-flex gr-total">
                             <h5>Total</h5>
-                            <div class="ml-auto h5"> $ 45.000</div>
+                            <div class="ml-auto h5" id="TOTAL"></div>
                         </div>
-                        <hr> </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-12 d-flex shopping-box"><a href="checkout.html" class="ml-auto btn hvr-hover">IR A PAGAR</a> </div>
+                <div class="col-12 d-flex shopping-box"><a href="checkout.html" class="ml-auto btn hvr-hover">IR A
+                        PAGAR</a> </div>
             </div>
 
         </div>
@@ -413,32 +324,36 @@
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Horario</h3>
-							<ul class="list-time">
-								<li>Lunes - Viernes: 08:00am a 05:00pm</li> <li>Sabados: 10:00am a 08:00pm</li> <li>Domingo: <span> Cerrado</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Danos tu email para enviarte las ultimas novedades!</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="ejemplo@gmail.com" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button style="background-color: #45ada8;" class="btn hvr-hover" type="submit">Enviar</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Nuestras redes sociales</h3>
-							<p>Puedes seguirnos en nuestras redes sociales para ver las ultimas tendencias y compartir a tus mascotas!</p>
-							<ul>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Horario</h3>
+                            <ul class="list-time">
+                                <li>Lunes - Viernes: 08:00am a 05:00pm</li>
+                                <li>Sabados: 10:00am a 08:00pm</li>
+                                <li>Domingo: <span> Cerrado</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Danos tu email para enviarte las ultimas novedades!</h3>
+                            <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="ejemplo@gmail.com" />
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <button style="background-color: #45ada8;" class="btn hvr-hover"
+                                    type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Nuestras redes sociales</h3>
+                            <p>Puedes seguirnos en nuestras redes sociales para ver las ultimas tendencias y compartir a
+                                tus mascotas!</p>
+                            <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -447,18 +362,23 @@
                                 <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                             </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>Sobre "Nuestras Mascotas"</h4>
                             <p>
-                                Somos una empresa en Santiago de Chile que ofrece productos y servicios de alta calidad para mascotas. Brindamos un servicio personalizado y amigable con una amplia selección de productos de las mejores marcas. Nuestro personal experto brinda asesoramiento y recomendaciones personalizadas para satisfacer las necesidades únicas de cada mascota. Apoyamos a organizaciones locales de rescate y adopción.
-                            </p> 
-							<p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su mascota pronto.</p> 							
+                                Somos una empresa en Santiago de Chile que ofrece productos y servicios de alta calidad
+                                para mascotas. Brindamos un servicio personalizado y amigable con una amplia selección
+                                de productos de las mejores marcas. Nuestro personal experto brinda asesoramiento y
+                                recomendaciones personalizadas para satisfacer las necesidades únicas de cada mascota.
+                                Apoyamos a organizaciones locales de rescate y adopción.
+                            </p>
+                            <p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su
+                                mascota pronto.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -479,13 +399,17 @@
                             <h4>Contactanos</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Dirección: Antonio Varas 666  <br>Providencia,<br> Región Metropolitana </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Dirección: Antonio Varas 666
+                                        <br>Providencia,<br> Región Metropolitana
+                                    </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888
+                                            705 770</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">nuestrasmascotas@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a
+                                            href="mailto:contactinfo@gmail.com">nuestrasmascotas@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -520,6 +444,7 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/cartHandler.js"></script>
 </body>
 
 </html>
