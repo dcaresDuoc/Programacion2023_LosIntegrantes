@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Register</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/stylelogin.css">
 
     <head>
         <meta charset="utf-8">
@@ -25,7 +26,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Site CSS -->
-        <link rel="stylesheet" href="css/styleRegister.css">
         <link rel="stylesheet" href="css/style.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="css/responsive.css">
@@ -118,31 +118,22 @@
         <!-- End Navigation -->
     </header>
     <div class="center">
-        <h1>Registrarse</h1>
+        <h1>Iniciar sesion</h1>
         <form method="post">
-            <div class="txt_field">
-                <input type="text" name="Nusuario" required>
-                <span></span>
-                <label>Usuario</label>
-            </div>
             <div class="txt_field">
                 <input type="text" required>
                 <span></span>
-                <label>Correo electronico</label>
+                <label>Usuario</label>
             </div>
             <div class="txt_field">
                 <input type="password" required>
                 <span></span>
                 <label>Contraseña</label>
             </div>
-            <div class="txt_field">
-                <input type="password" required>
-                <span></span>
-                <label>Confirmar Contraseña</label>
-            </div>
-            <input type="submit" value="Register">
+            <div class="pass">Olvido su Contraseña?</div>
+            <input type="submit" value="Login">
             <div class="signup_link">
-                Ya tienes cuenta?<a href="login.php">Iniciar sesion</a>
+                No es un miembro?<a href="Register.html">Registrarse</a>
             </div>
         </form>
     </div>

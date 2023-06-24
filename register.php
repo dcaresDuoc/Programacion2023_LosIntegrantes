@@ -53,7 +53,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">Inicio</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
                         <li class="dropdown">
                             <a href="shop.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Tienda</a>

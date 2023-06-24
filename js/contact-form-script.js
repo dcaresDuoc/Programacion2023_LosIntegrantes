@@ -1,3 +1,19 @@
+function validarCorreo() {
+    // Obtener el valor del campo de entrada de correo electrónico
+    var correo = document.getElementById('email').value;
+    
+    // Expresión regular para validar el formato del correo electrónico
+    var expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
+    // Validar el formato del correo electrónico
+    if (!expresion.test(correo)) {
+      alert("El correo electrónico no es válido.");
+      return false; // Evita el envío del formulario
+    }
+    
+    return true; // Permite el envío del formulario
+  }
+
 $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
@@ -9,7 +25,6 @@ $("#contactForm").validator().on("submit", function (event) {
         submitForm();
     }
 });
-
 
 function submitForm(){
     // Initiate Variables With Form Content
