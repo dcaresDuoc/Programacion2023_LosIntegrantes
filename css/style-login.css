@@ -1,0 +1,139 @@
+
+
+*{
+ margin: 0;
+ padding: 0;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* espejo borroso filtro */
+body{
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; 
+}
+
+
+.back-fondo{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  background-image :url("https://images.pexels.com/photos/1144176/pexels-photo-1144176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+.blurred-box{
+  position: relative;
+  width: 350px;
+  height: 450px;
+  top: calc(50% - 175px);
+  left: calc(50% - 125px);
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.blurred-box:after{
+ content: '';
+ width: 500px;
+ height: 500px;
+ background: inherit; 
+ position: absolute;
+ left: -25px;
+ right: 0;
+ top: -25px;
+ bottom: 0;
+ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+ filter: blur(10px);
+}
+
+
+/* Separadores y contenedores de inputs */
+.separator{
+    border-top: 1px transparent;
+    height: 2px;
+    padding: 0;
+    margin: 1px auto 0 auto;
+  
+}
+
+.user-login-box{
+  position: relative ;
+  margin-top: 105px;
+  text-align: center;
+  z-index: 1;
+}
+.user-login-box > *{
+  display: inline-block;
+  width: 254px;
+}
+
+.user-icon{
+  width: 130px;
+  height: 130px;
+  position: relative;
+  border-radius: 50%;
+  background-size: contain;
+  background-image: url(../images/Cam\ 1.1.png);
+}
+
+input.user-name{
+  width: 150px;
+  height: 13px;
+  opacity: 0.4;
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+}
+
+input.user-password{
+  width: 150px;
+  height: 13px;
+  opacity: 0.4;
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+}
+
+
+/*diseño boton*/
+
+.separator-2{
+  border-top: 1px transparent;
+  height: 2px;
+  padding: 0;
+  margin: 10px auto 0 auto;
+}
+
+
+.button {
+  align-items: center;
+  content:"";
+  width: 120px;
+  height: 12px;
+  position: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: 40px;
+  box-shadow: 
+            inset 2px 2px 19px rgba(255, 255, 255, 0.1),
+            2px 2px 8px rgba(0, 0, 0, 0.15);
+  color: #000;
+  font-size: 14px;  
+  letter-spacing: 4px;
+  padding: 4px 20px;
+}
+
+.button:hover {
+  box-shadow: 
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+

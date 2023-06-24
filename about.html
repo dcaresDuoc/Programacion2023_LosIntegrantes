@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <script text="text/javascript" src="js/api.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -35,29 +35,7 @@
 
 </head>
 
-<body onload="getDatos()">
-    <!-- Start Main Top -->
-    <div class="main-top">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- USO DE API -->
-                <!-- (2).- Aqui trae los datos solicitados -->
-                <div id="test" style="color: aliceblue; padding-left: 30% ;"></div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<!-- <div class="login-box">
-						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option>Register Here</option>
-							<option>Sign In</option>
-						</select>
-					</div> -->
-                    <div class="text-slid-box">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -65,10 +43,11 @@
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                    <a class="navbar-brand" href="index.html"><img  src="images/logo.png" class="logo" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -80,8 +59,8 @@
                         <li class="dropdown">
                             <a href="shop.html" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Tienda</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Catálogo</a></li>
-								<li><a href="shop-detail.html">Detalle de producto</a></li>
+                                <li><a href="shop.html">Catálogo</a></li>
+                                <li><a href="shop-detail.html">Detalle de producto</a></li>
                                 <li><a href="cart.html">Carrito</a></li>
                                 <li><a href="checkout.html">Pagar</a></li>
                                 <li><a href="my-account.html">Mi cuenta</a></li>
@@ -99,12 +78,12 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="cart.html">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-							<p>Mi Carrito</p>
-					</a>
-                    <li class="nav-item"><a class="nav-link" href="Login.html">Iniciar sesión</a></li><li class="nav-item"></li>
-                </li>
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="badge" id="CART_LEN">3</span>
+                                <p>Mi Carrito</p>
+                            </a>
+                        <li class="nav-item"><a class="nav-link" href="login.php">Iniciar sesión</a></li>
+                        <li class="nav-item">
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -174,38 +153,54 @@
     <div class="about-box-main">
         <div class="container">
             <div class="row">
-				<div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h2 class="noo-sh-title-top">Nosotros somos <span>"Nuestras Mascotas"</span></h2>
-                    <p>"Somos una empresa familiar dedicada a ofrecer productos y servicios de alta calidad para mascotas en Santiago de Chile. Desde nuestro inicio, nos hemos comprometido a brindar un servicio personalizado y amigable a nuestros clientes, y siempre estamos dispuestos a ayudar con cualquier pregunta o necesidad que puedan tener.
+                    <p>"Somos una empresa familiar dedicada a ofrecer productos y servicios de alta calidad para
+                        mascotas en Santiago de Chile. Desde nuestro inicio, nos hemos comprometido a brindar un
+                        servicio personalizado y amigable a nuestros clientes, y siempre estamos dispuestos a ayudar con
+                        cualquier pregunta o necesidad que puedan tener.
 
-                        En nuestra tienda, encontrará una amplia selección de alimentos, juguetes, ropa, accesorios y productos para el cuidado de mascotas. Nos enorgullece ofrecer productos de alta calidad de algunas de las marcas más respetadas en la industria de mascotas. Además, nuestro personal es conocedor y experimentado, y siempre está dispuesto a brindar asesoramiento y recomendaciones personalizadas para satisfacer las necesidades únicas de su mascota.
-                        
-                        Nos encanta la comunidad de mascotas y apoyamos a organizaciones locales de rescate y adopción. Trabajamos de cerca con estas organizaciones para asegurarnos de que los animales necesitados reciban el cuidado y atención que merecen.</p>
-                    <p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su mascota pronto.</p>
-					<a class="btn hvr-hover" href="#">Leer más</a>
+                        En nuestra tienda, encontrará una amplia selección de alimentos, juguetes, ropa, accesorios y
+                        productos para el cuidado de mascotas. Nos enorgullece ofrecer productos de alta calidad de
+                        algunas de las marcas más respetadas en la industria de mascotas. Además, nuestro personal es
+                        conocedor y experimentado, y siempre está dispuesto a brindar asesoramiento y recomendaciones
+                        personalizadas para satisfacer las necesidades únicas de su mascota.
+
+                        Nos encanta la comunidad de mascotas y apoyamos a organizaciones locales de rescate y adopción.
+                        Trabajamos de cerca con estas organizaciones para asegurarnos de que los animales necesitados
+                        reciban el cuidado y atención que merecen.</p>
+                    <p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su mascota
+                        pronto.</p>
+                    <a class="btn hvr-hover" href="#">Leer más</a>
                 </div>
             </div>
             <div class="row my-5">
                 <div class="col-sm-6 col-lg-4">
                     <div class="service-block-inner">
                         <h3>SOMOS DE CONFIANZA</h3>
-                        <p>Somos una empresa comprometida con la calidad y el bienestar de tus mascotas. Nuestra misión es brindarte productos y servicios confiables que satisfagan las necesidades de tus peludos y fortalezcan el vínculo que tienes con ellos.</p>
+                        <p>Somos una empresa comprometida con la calidad y el bienestar de tus mascotas. Nuestra misión
+                            es brindarte productos y servicios confiables que satisfagan las necesidades de tus peludos
+                            y fortalezcan el vínculo que tienes con ellos.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="service-block-inner">
                         <h3>SOMOS PROFESIONALES</h3>
-                        <p>Nuestro equipo está conformado por expertos en el cuidado y la salud animal, dispuestos a brindarte asesoría y atención personalizada en todo momento. Contamos con amplia experiencia en el mercado y estamos comprometidos con tu satisfacción y la de tus mascotas.</p>
+                        <p>Nuestro equipo está conformado por expertos en el cuidado y la salud animal, dispuestos a
+                            brindarte asesoría y atención personalizada en todo momento. Contamos con amplia experiencia
+                            en el mercado y estamos comprometidos con tu satisfacción y la de tus mascotas.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="service-block-inner">
                         <h3>SOMOS EXPERTOS</h3>
-                        <p>Nos apasiona lo que hacemos y nos esforzamos por estar a la vanguardia en cuanto a productos, servicios y tecnología. Nos actualizamos constantemente para ofrecerte soluciones innovadoras y eficientes que te permitan cuidar mejor a tus peludos.</p>
+                        <p>Nos apasiona lo que hacemos y nos esforzamos por estar a la vanguardia en cuanto a productos,
+                            servicios y tecnología. Nos actualizamos constantemente para ofrecerte soluciones
+                            innovadoras y eficientes que te permitan cuidar mejor a tus peludos.</p>
                     </div>
                 </div>
             </div>
@@ -215,9 +210,10 @@
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="hover-team">
-                        <div class="our-team"> <img  src="images/fracisco_riquelme.jpg.jpeg" alt="" />
+                        <div class="our-team"> <img src="images/fracisco_riquelme.jpg.jpeg" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Francisco Riquelme</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Francisco Riquelme</h3> <span class="post">Web Developer</span>
+                            </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -237,13 +233,15 @@
                         <div class="team-description">
                             <p></p>
                         </div>
-                        <hr class="my-0"> </div>
+                        <hr class="my-0">
+                    </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="hover-team">
                         <div class="our-team"> <img src="images/img-2.jpg" alt="" />
                             <div class="team-content">
-                                <h3 class="title">David Escobar</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">David Escobar</h3> <span class="post">Web Developer</span>
+                            </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -263,13 +261,15 @@
                         <div class="team-description">
                             <p></p>
                         </div>
-                        <hr class="my-0"> </div>
+                        <hr class="my-0">
+                    </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="hover-team">
                         <div class="our-team"> <img src="images/img-3.jpeg" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Alexis Grumi</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Alexis Grumi</h3> <span class="post">Web Developer</span>
+                            </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -289,13 +289,15 @@
                         <div class="team-description">
                             <p></p>
                         </div>
-                        <hr class="my-0"> </div>
+                        <hr class="my-0">
+                    </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="hover-team">
                         <div class="our-team"> <img src="images/img-4.jpg" alt="" />
                             <div class="team-content">
-                                <h3 class="title">David Garrido</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">David Garrido</h3> <span class="post">Web Developer</span>
+                            </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -315,7 +317,8 @@
                         <div class="team-description">
                             <p></p>
                         </div>
-                        <hr class="my-0"> </div>
+                        <hr class="my-0">
+                    </div>
                 </div>
             </div>
         </div>
@@ -414,32 +417,36 @@
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Horario</h3>
-							<ul class="list-time">
-								<li>Lunes - Viernes: 08:00am a 05:00pm</li> <li>Sabados: 10:00am a 08:00pm</li> <li>Domingo: <span> Cerrado</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Danos tu email para enviarte las ultimas novedades!</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="ejemplo@gmail.com" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button style="background-color: #45ada8;" class="btn hvr-hover" type="submit">Enviar</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Nuestras redes sociales</h3>
-							<p>Puedes seguirnos en nuestras redes sociales para ver las ultimas tendencias y compartir a tus mascotas!</p>
-							<ul>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Horario</h3>
+                            <ul class="list-time">
+                                <li>Lunes - Viernes: 08:00am a 05:00pm</li>
+                                <li>Sabados: 10:00am a 08:00pm</li>
+                                <li>Domingo: <span> Cerrado</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Danos tu email para enviarte las ultimas novedades!</h3>
+                            <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="ejemplo@gmail.com" />
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <button style="background-color: #45ada8;" class="btn hvr-hover"
+                                    type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Nuestras redes sociales</h3>
+                            <p>Puedes seguirnos en nuestras redes sociales para ver las ultimas tendencias y compartir a
+                                tus mascotas!</p>
+                            <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -448,18 +455,23 @@
                                 <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                             </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>Sobre "Nuestras Mascotas"</h4>
                             <p>
-                                Somos una empresa en Santiago de Chile que ofrece productos y servicios de alta calidad para mascotas. Brindamos un servicio personalizado y amigable con una amplia selección de productos de las mejores marcas. Nuestro personal experto brinda asesoramiento y recomendaciones personalizadas para satisfacer las necesidades únicas de cada mascota. Apoyamos a organizaciones locales de rescate y adopción.
-                            </p> 
-							<p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su mascota pronto.</p> 							
+                                Somos una empresa en Santiago de Chile que ofrece productos y servicios de alta calidad
+                                para mascotas. Brindamos un servicio personalizado y amigable con una amplia selección
+                                de productos de las mejores marcas. Nuestro personal experto brinda asesoramiento y
+                                recomendaciones personalizadas para satisfacer las necesidades únicas de cada mascota.
+                                Apoyamos a organizaciones locales de rescate y adopción.
+                            </p>
+                            <p>Gracias por elegir nuestra tienda de mascotas. Esperamos poder ayudar a usted y a su
+                                mascota pronto.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -480,13 +492,16 @@
                             <h4>Contacto</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Dirección: Antonio Varas 666  <br>Providencia,<br> Región Metropolitana </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Dirección: Antonio Varas 666
+                                        <br>Providencia,<br> Región Metropolitana </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888
+                                            705 770</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">nuestrasmascotas@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a
+                                            href="mailto:contactinfo@gmail.com">nuestrasmascotas@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
