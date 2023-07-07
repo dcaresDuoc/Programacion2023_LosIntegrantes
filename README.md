@@ -3,12 +3,12 @@
  
  HTML, CSS ,JavaScript, PHP
 
-Tecnologia:
+Tecnologia: php
 
 desarrollo de sitio web versionado de codigo con git para construccion de este sitio dinamico y con acceso a esos datos
 
-FrameWork.
+FrameWork: php
 
-ORM
+ORM: xampp
 
 Base de Datos utilizada
