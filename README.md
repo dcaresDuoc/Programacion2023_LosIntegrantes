@@ -14,7 +14,7 @@ Lenguaje utilizado: HTML
     Se utilizo hojas de estilo para la creacion de las diversas pestañas del proyecto, tales como:
 
     INDEX
-    ![Screenshot](assets/Index.png)
+    ![Screenshot](assets/%20Index.png)
 
     Carro de compras
     ![Screenshot](assets/%20Carrito.png)
