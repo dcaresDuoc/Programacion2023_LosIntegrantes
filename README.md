@@ -9,7 +9,7 @@ ORM: xampp
 
 Base de Datos utilizada : sql
 
-
+![Screenshot](assets/Index.png)
 Lenguaje utilizado: HTML
     Se utilizo hojas de estilo para la creacion de las diversas pestañas del proyecto, tales como:
 
